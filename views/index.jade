@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1 Kurus
+  h2 Version #{package.version}
+  p Kurus is an opinionated implementation of expressjs that fits into the workflow for 537.
+  p It is built for rapid development of small applications and APIs, easy deployment, and to hook into existing infrastructure with no configuration.
+  h4 Features
+  em Development
+  ul
+    li Live reload of express
+    li gulp watch to rebuild all client side assets
+  em Deployment
+  ul
+    li Automatic building, magnification, tagging of client resources
+    li Easily hooks into any dokku environment
+  em Operations
+  ul
+    li Uses helmet to make express more secure
+    li Uses outrider to format and send logs to logstash
+
+  h4 package.json
+  each val, key in package
+    if typeof(val) === 'object'
+      em= key
+      ul
+      each _val, _key in val
+        li #{_key} - #{_val}
+    else
+      p #{key} - #{val}

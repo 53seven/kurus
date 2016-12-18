@@ -1,0 +1,3 @@
+#!/bin/bash
+nohup logstash agent -f ./logstash.conf --allow-env &
+node ./bin/www --production

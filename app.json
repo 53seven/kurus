@@ -2,7 +2,7 @@
   "name": "kurus",
   "scripts": {
     "dokku": {
-      "postdeploy": "nohup logstash agent -f logstash.conf --allow-env &"
+      "postdeploy": "./deploy/post-deploy"
     }
   }
 }

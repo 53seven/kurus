@@ -1,0 +1,8 @@
+{
+  "name": "kurus",
+  "scripts": {
+    "dokku": {
+      "postdeploy": "logstash agent -f logstash.conf --allow-env"
+    }
+  }
+}

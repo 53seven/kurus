@@ -1,8 +1,0 @@
-{
-  "name": "kurus",
-  "scripts": {
-    "dokku": {
-      "postdeploy": "./deploy/post-deploy"
-    }
-  }
-}
